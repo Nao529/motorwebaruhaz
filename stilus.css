@@ -1,0 +1,89 @@
+body {
+    color: #3d3d5c;
+    background-color: #c2c2d6;
+}
+img {
+    width: 100%;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    background-color: #e0e0eb;
+    padding: 2px 5px 2px 5px;
+}
+a:visited {
+    color: #3d3d5c;
+}
+a:hover {
+    color:#9494b8;
+    background-color: #f0f0f5;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    list-style-type: none;
+    margin: 5px;
+    padding: 3px;
+}
+header, nav, article, aside, footer {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.termek {
+    border: 1px solid white;
+    padding: 3px;
+}
+.kosar {
+    border: 1px solid white;
+    padding: 3px;
+}
+main {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-areas: "h h"
+                         "n n"
+                         "a as"
+                         "f f";
+}
+article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+aside {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+}
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+article {
+    grid-area: a;
+}
+aside {
+    grid-area: as;
+}
+footer {
+    grid-area: f;
+    text-align: center;
+}
+@media screen and (max-width:800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "a"
+                             "f";
+    }
+    article {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        grid-template-columns: 2fr;
+}
+}
